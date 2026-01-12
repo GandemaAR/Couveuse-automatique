@@ -14,11 +14,11 @@ Stack size: 8
 Lines Stmts  %   Files
 ----- ----- ---  -----
     3     0   0  $linker.c
-  107    60  38  main.c
-  708     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
-  456   100  62  ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+  109    60  38  main.c
+  708     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
+  456   100  62  ..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
 ----- -----
- 1274   160 Total
+ 1276   160 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

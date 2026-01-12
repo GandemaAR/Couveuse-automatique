@@ -1,6 +1,6 @@
-CCS PCM C Compiler, Version 5.112, 5967               09-janv.-26 16:23
+CCS PCM C Compiler, Version 5.112, 5967               12-janv.-26 14:18
 
-               Filename:   C:\Users\RACHID\Documents\Couveuse_DS18B20\Couveus_Code.X\dist\default\production\Couveus_Code.X.production.lst
+               Filename:   C:\Users\RACHID\Desktop\Proteus\Couveuse-automatique\Couveus_Code.X\dist\default\production\Couveus_Code.X.production.lst
 
                ROM used:   1476 words (18%)
                            Largest free fragment is 2048
@@ -810,7 +810,7 @@ CCS PCM C Compiler, Version 5.112, 5967               09-janv.-26 16:23
 .................... #list
 .................... 
 .................... #fuses HS,NOWDT,NOPROTECT,NOLVP                       
-.................... #use delay(clock = 16MHz)
+.................... #use delay(clock = 16000000)
 *
 0012:  MOVLW  36
 0013:  MOVWF  04
@@ -1631,6 +1631,8 @@ CCS PCM C Compiler, Version 5.112, 5967               09-janv.-26 16:23
 .................... }
 .................... 
 .................... #endif
+.................... 
+.................... 
 .................... 
 .................... #define DS18B20_PIN PIN_B1                         // DS18B20 Data pin is connected to pin RB1
 .................... 

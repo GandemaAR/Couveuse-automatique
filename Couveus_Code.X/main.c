@@ -13,8 +13,10 @@
 
 #include <16F877A.h>
 #fuses HS,NOWDT,NOPROTECT,NOLVP                       
-#use delay(clock = 16MHz)
+#use delay(clock = 16000000)
 #include <lcd.c>
+
+
 #define DS18B20_PIN PIN_B1                         // DS18B20 Data pin is connected to pin RB1
 
 signed int16 raw_temp;
