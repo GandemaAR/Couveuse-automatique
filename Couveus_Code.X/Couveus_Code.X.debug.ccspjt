@@ -1,0 +1,16 @@
+[PROJECT]
+Target=dist\default\debug\Couveus_Code.X.debug.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=$linker.c
+[dist\default\debug\Couveus_Code.X.debug.c]
+Type=4
+[mru-list]
+1=dist\default\debug\Couveus_Code.X.debug.c
+[Units]
+Count=2
+1=main
+2=PWM
+Link=1

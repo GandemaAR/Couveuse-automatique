@@ -1,3 +1,4 @@
+/* Fichier de gestion du PWM du PIC16F877A */
 #include <16F877A.h>
 #device ADC=16
 #fuses HS, NOWDT, NOPUT, NOPROTECT, NOLVP
@@ -14,11 +15,10 @@
 #byte CCPR1L = 0x15
 #byte CCP1CON = 0x17
 #byte TRISC = 0x87
-
 #byte TMR2 = 0x11
 #byte PIR1 = 0x0C
 
-/*************** Prototypes ***************/
+/*************** Prototypes des Fonctions ***************/
 void pwm_init(unsigned int16 pwm_frequency, unsigned int8 prescaler);
 void pwm_set_duty_(unsigned int16 duty_value);
 void pwm_set_duty_percent(unsigned int8 percent);
@@ -27,33 +27,7 @@ unsigned int16 calculate_pr2(unsigned int16 frequency, unsigned int8 prescaler);
 /*************** Variables globales ***************/
 unsigned int16 max_duty_value = 0;
 
-/*************** Fonction principale ***************/
-void main(void) {
-    unsigned int8 percent;
-    
-    // Initialisation PWM à 1kHz avec prescaler = 4
-    pwm_init(1000, 4);
-    
-    while(1) {
-        // Fade in (0% à 100%)
-        for(percent = 0; percent <= 100; percent++) {
-            pwm_set_duty_percent(percent);
-            delay_ms(20);
-        }
-        
-        delay_ms(500);
-        
-        // Fade out (100% à 0%)
-        for(percent = 100; percent > 0; percent--) {
-            pwm_set_duty_percent(percent);
-            delay_ms(20);
-        }
-        
-        delay_ms(500);
-    }
-}
-
-/*************** Fonctions PWM ***************/
+/*************** Définitions Fonctions PWM ***************/
 
 /*
  * Initialise le module PWM
